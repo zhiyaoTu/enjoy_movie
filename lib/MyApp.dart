@@ -1,4 +1,6 @@
 // ignore_for_file: file_names
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:love_search_padi/pages/home/MinePage.dart';
@@ -19,6 +21,8 @@ class MyApp extends StatelessWidget {
       systemNavigationBarColor: Colors.white,
       systemNavigationBarIconBrightness: Brightness.dark,
     ));
+
+    // HttpOverrides.global = MyProxyHttpOverride();
 
     return MaterialApp(
         theme: ThemeData(
@@ -43,5 +47,19 @@ class MyApp extends StatelessWidget {
         supportedLocales: const [
           Locale('zh', 'CN'),
         ]);
+  }
+}
+
+
+class MyProxyHttpOverride extends HttpOverrides {
+  @override
+  HttpClient createHttpClient(SecurityContext? context) {
+    return super.createHttpClient(context)
+      ..findProxy = (uri) {
+        // return "PROXY 192.168.0.102:8888;"; // deviceの場合
+        return "PROXY localhost:9090;"; // シミュレーター
+      }
+      ..badCertificateCallback =
+          (X509Certificate cert, String host, int port) => true;
   }
 }
