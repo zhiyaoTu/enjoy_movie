@@ -130,3 +130,8 @@ app.*.symbols
 
 # melos related
 pubspec_overrides.yaml
+/ios/Flutter/Debug.xcconfig
+/ios/Flutter/flutter_export_environment.sh
+/ios/Flutter/Generated.xcconfig
+/ios/Flutter/Release.xcconfig
+/android/local.properties
