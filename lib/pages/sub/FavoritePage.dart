@@ -2,9 +2,10 @@
 import 'dart:convert';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:love_search_padi/pages/player/main.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+
+import '../player/main.dart';
 
 class FavoritePage extends StatefulWidget {
   const FavoritePage({super.key});

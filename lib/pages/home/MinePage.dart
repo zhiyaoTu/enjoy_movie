@@ -1,11 +1,12 @@
 // ignore_for_file: file_names, deprecated_member_use
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:love_search_padi/pages/sub/FavoritePage.dart';
-import 'package:love_search_padi/pages/sub/HistroyPage.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter/services.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+
+import '../sub/FavoritePage.dart';
+import '../sub/HistroyPage.dart';
 
 class MinePage extends StatelessWidget {
   const MinePage({super.key});

@@ -1,11 +1,12 @@
+import 'package:enjoy_movie/di/di_container.dart';
+import 'package:enjoy_movie/di/di_initializer.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import './MyApp.dart';
-// ignore: depend_on_referenced_packages
-//import 'package:media_kit/media_kit.dart';
 
 void main() {
-  //WidgetsFlutterBinding.ensureInitialized();
-  // Necessary initialization for package:media_kit.
-  //MediaKit.ensureInitialized();
-  runApp(const MyApp());
+  initDI(diContainer);
+
+  runApp(const ProviderScope(child: MyApp()));
 }
+ 

@@ -1,10 +1,10 @@
-// ignore_for_file: file_names, library_private_types_in_public_api, use_build_context_synchronously
 import 'dart:convert';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:love_search_padi/pages/player/main.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+
+import '../player/main.dart';
 
 class HistroyPage extends StatefulWidget {
   const HistroyPage({super.key});

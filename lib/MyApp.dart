@@ -1,14 +1,13 @@
-// ignore_for_file: file_names
 import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:love_search_padi/pages/home/MinePage.dart';
-import 'package:love_search_padi/pages/home/ClassificationPage.dart';
-//import 'package:love_search_padi/pages/player/main.dart';
-import './pages/MainPage.dart';
-import './pages/home/HomePage.dart';
+import 'MainPage.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+
+import 'home/presentation/pages/home_page.dart';
+import 'pages/home/ClassificationPage.dart';
+import 'pages/home/MinePage.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
